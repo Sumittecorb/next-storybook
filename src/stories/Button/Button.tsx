@@ -28,7 +28,7 @@ const getModeClasses = (isPrimary: boolean) =>
     : 'text-white bg-gray-600 ';
 
 const BASE_BUTTON_CLASSES =
-  'cursor-pointer rounded-xl font-bold leading-none';
+  'cursor-pointer rounded-xl font-normal leading-none';
 
 export const Button = ({ primary = false, size = 'medium', label, ...props }: ButtonProps) => {
   const computedClasses = useMemo(() => {
@@ -44,26 +44,3 @@ export const Button = ({ primary = false, size = 'medium', label, ...props }: Bu
     </button>
   );
 };
-// export const Button = ({
-//   primary = false,
-//   size = 'medium',
-//   backgroundColor,
-//   label,
-//   ...props
-// }: ButtonProps) => {
-//   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-//   return (
-//     <button
-//       type="button"
-//       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-//       {...props}
-//     >
-//       {label}
-//       <style jsx>{`
-//         button {
-//           background-color: ${backgroundColor};
-//         }
-//       `}</style>
-//     </button>
-//   );
-// };

@@ -14,10 +14,10 @@ const getSizeClasses = (size: string) => {
       return 'px-4 py-2.5';
     }
     case 'large': {
-      return 'px-5 py-3.5';
+      return 'px-6 py-3.5';
     }
     default: {
-      return 'px-6 py-3';
+      return 'px-5 py-3';
     }
   }
 };
