@@ -26,29 +26,3 @@ export const TopLeftOpen: Story = {
         menuList: ["Home", "About", "Services", "Portfolio", "Contact"],
     },
 };
-// export const Warning: Story = {
-//     args: {
-//         label: 'Warning Button',
-//     }
-// };
-// export const Large: Story = {
-//     args: {
-//         size: 'large',
-//         label: 'Large Button',
-//     },
-// };
-
-// export const Small: Story = {
-//     args: {
-//         size: 'small',
-//         label: 'Small Button',
-//     },
-// };
-// export const bottomLeft: Story = {
-//     args: {
-//         size: 'small',
-//         label: 'Small Button',
-//     },
-// };
-
-
