@@ -3,8 +3,6 @@ import React, { useMemo } from 'react';
 interface InputProps {
     size?: 'small' | 'medium' | 'large';
     label: string;
-    placeholder?: string;
-    type?: string;
 }
 const getMainContainerClasses = (size: string) => {
     switch (size) {
@@ -46,7 +44,7 @@ const getLabelClasses = (size: string) => {
     }
 };
 const fileInputCommonClass = "appearance-none border rounded h-12 px-3 w-full leading-tight focus:outline-none focus:shadow-outline"
-export const FileInput = ({ size = 'medium', label, placeholder, type, ...props }: InputProps) => {
+export const FileInput = ({ size = 'medium', label, ...props }: InputProps) => {
     const computedFileInputClasses = useMemo(() => {
         const sizeClass = getFileInputClasses(size);
         return [sizeClass].join(' ');
@@ -63,12 +61,15 @@ export const FileInput = ({ size = 'medium', label, placeholder, type, ...props 
         <>
             <div className={`${computedMainContainerClasses} mb-3`}>
                 <label className={`${computedLabelClasses} block mb-2`} htmlFor='username' >{label}</label>
-                <input type={type} id="username" className={`${computedFileInputClasses} ${fileInputCommonClass}`} placeholder={placeholder} />
+                <input type="text" id="username" className={`${computedFileInputClasses} ${fileInputCommonClass}`} />
             </div>
-            <div className='mt-5 bg-red-300 p-5 relative'>
-                <input type="file" className='w-24 h-24' />
-                <div className='w-24 h-24 absolute top-0 left-0'>
-                    <img src=".." className='w-full h-full' />
+            <div className='mt-5 bg-red-300 p-5 '>
+                <label className={`${computedLabelClasses} block mb-2`} htmlFor='username' >{label}</label>
+                <div className='relative w-24 h-24'>
+                    <input type="file" className='w-24 h-24 absolute top-0 left-0 cursor-pointer' />
+                    <div className='w-24 h-24'>
+                        <img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" className='w-full h-full' />
+                    </div>
                 </div>
             </div>
         </>
