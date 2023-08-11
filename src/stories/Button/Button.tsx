@@ -34,7 +34,6 @@ export const Button = ({ primary = false, size = 'medium', label, ...props }: Bu
   const computedClasses = useMemo(() => {
     const modeClass = getModeClasses(primary);
     const sizeClass = getSizeClasses(size);
-
     return [modeClass, sizeClass].join(' ');
   }, [primary, size]);
 
