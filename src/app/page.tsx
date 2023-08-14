@@ -2,13 +2,64 @@
 import { Button } from '@/stories/Button/Button'
 import { Checkbox } from '@/stories/Checkbox/Checkbox'
 import { FileInput } from '@/stories/FileInput/FileInput'
+import { Month } from '@/stories/Month/Month'
 import { Navbar } from '@/stories/Navbar/Navbar'
 import { RadioButton } from '@/stories/RadioButton/RadioButton'
+import { RangeInput } from '@/stories/RangeInput/RangeInput'
+import { SearchInput } from '@/stories/SearchInput/SearchInput'
 import { Sidebar } from '@/stories/Sidebar/Sidebar'
+import { Time } from '@/stories/Time/Time'
+import { UrlInput } from '@/stories/UrlInput/UrlInput'
+import { Week } from '@/stories/Week/Week'
 
 export default function Home() {
   return (
     <>
+      <div>
+        <h1 className='bg-black text-white p-5'>URL Input</h1>
+        <UrlInput
+          label="Add your URL"
+          placeholder="https://www.google.com/"
+          size="medium"
+        />
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Range Input</h1>
+        <RangeInput
+          label="Volume (between 0 and 50):"
+          placeholder="Search Here....."
+          size="small"
+        />
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Search Input</h1>
+        <SearchInput
+          label="Search Something"
+          placeholder="Search Here....."
+          size="small"
+        />
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Week Input</h1>
+        <Week
+          label="Select a Week"
+          size="large"
+        />
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Time Input</h1>
+        <Time
+          label="Select a Time"
+          size="small"
+        />
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Month Input</h1>
+        <Month
+          label="Select a Month"
+          size="medium"
+        />
+      </div>
       <div>
         <h1 className='bg-black text-white p-5'>Checkbox Button</h1>
         <FileInput
