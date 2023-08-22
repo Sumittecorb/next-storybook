@@ -66,6 +66,7 @@ export const Sidebar = ({ halfClose = false, menuList, ...props }: SidebarProps)
                         </div>
                     </div>
                     <hr />
+                  
                 </div>
             </div>
         </>
