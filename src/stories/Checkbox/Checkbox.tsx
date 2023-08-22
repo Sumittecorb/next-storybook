@@ -27,13 +27,13 @@ const getHeightWidthClasses = (design: string) => {
 const getLabelClasses = (design: string) => {
     switch (design) {
         case 'lower': {
-            return 'text-red-400 text-lg ml-6';
+            return 'text-red-400 text-lg ml-8';
         }
         case 'medium': {
-            return 'text-black text-lg ml-7';
+            return 'text-black text-lg ml-10';
         }
         default: {
-            return 'text-sky-400 text-xl ml-8';
+            return 'text-sky-400 text-xl ml-10';
         }
     }
 };
@@ -50,7 +50,7 @@ export const Checkbox = ({ type, design = 'medium', idForName, checkedImage, unC
     }, [design]);
     return (
         <>
-            <div className='relative flex items-center'>
+            <div className='relative flex items-baseline'>
                 <input type={type} id={idForName} value={value} name={idForName} className={`${positionCommonClass} ${computedHeightWidthClasses} z-10 opacity-0 peer`} />
                 <label htmlFor={idForName} className={`${computedLabelClasses} cursor-pointer `}>{label}</label>
                 <img src={unCheckedImage}

@@ -2,6 +2,8 @@
 import { Button } from '@/stories/Button/Button'
 import { Checkbox } from '@/stories/Checkbox/Checkbox'
 import { FileInput } from '@/stories/FileInput/FileInput'
+import { Footer } from '@/stories/Footer/Footer'
+import { Input } from '@/stories/Input/Input'
 import { Month } from '@/stories/Month/Month'
 import { Navbar } from '@/stories/Navbar/Navbar'
 import { RadioButton } from '@/stories/RadioButton/RadioButton'
@@ -15,6 +17,106 @@ import { Week } from '@/stories/Week/Week'
 export default function Home() {
   return (
     <>
+      <div>
+        <h1 className='bg-black text-white p-5'>Footer Section</h1>
+          <Footer/>
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>SignUp Form</h1>
+        <div className='w-full flex items-center justify-center p-10'>
+          <div className='w-[500px]'>
+            <div>
+              <Input
+                label="First Name"
+                placeholder="First Name"
+                size="large"
+                type="text"
+              />
+            </div>
+            <div>
+              <Input
+                label="Last Name"
+                placeholder="Last Name"
+                size="large"
+                type="text"
+              />
+            </div>
+            <div>
+              <Input
+                label="Email"
+                placeholder="Email"
+                size="large"
+                type="email"
+              />
+            </div>
+            <div>
+              <Input
+                label="Password"
+                placeholder="Password"
+                size="large"
+                type="password"
+              />
+            </div>
+            <div>
+              <Input
+                label="Confirm Password"
+                placeholder="Confirm Password"
+                size="large"
+                type="password"
+              />
+            </div>
+            <div>
+              <Checkbox
+                checkedImage="https://user-images.githubusercontent.com/11351528/51387695-f564d000-1b4c-11e9-817d-5e6280f997d0.png"
+                design="medium"
+                idForName="vehical2"
+                label="By Clicking the Sign Up button, you agree to our Terms & Conditions and Privacy Policy"
+                type="checkbox"
+                unCheckedImage="https://e7.pngegg.com/pngimages/716/420/png-clipart-checkbox-rectangle-square-computer-icons-checkboxes-angle-check-mark-thumbnail.png"
+                value="Car"
+              />
+            </div>
+            <div className='mt-14'>
+              <Button
+                label="Submit"
+                onClick={() => { }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Login Form</h1>
+        <div className='w-full flex items-center justify-center p-10'>
+          <div className='w-[500px]'>
+            <div>
+              <Input
+                label="UserName"
+                placeholder="UserName"
+                size="large"
+                type="text"
+              />
+            </div>
+            <div>
+              <Input
+                label="Password"
+                placeholder="Password"
+                size="large"
+                type="password"
+              />
+            </div>
+            <div className='float-right'>
+              <a href="#" className='text-sky-400'>Forget Password</a>
+            </div>
+            <div className='mt-14'>
+              <Button
+                label="Submit"
+                onClick={() => { }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div>
         <h1 className='bg-black text-white p-5'>URL Input</h1>
         <UrlInput

@@ -25,7 +25,7 @@ const getInputSizeClasses = (size: string) => {
             return 'bg-red-200 placeholder-red-400 text-red-400';
         }
         case 'large': {
-            return 'bg-gray-200 placeholder-gray-400 text-gray-400';
+            return 'bg-gray-200 placeholder-gray-400 text-black';
         }
         default: {
             return 'bg-sky-200 placeholder-sky-400 text-sky-400';
@@ -45,7 +45,7 @@ const getLabelClasses = (size: string) => {
         }
     }
 };
-const inputCommonClass = "appearance-none border rounded h-12 px-3 w-full leading-tight focus:outline-none focus:shadow-outline"
+const inputCommonClass = "appearance-none border rounded h-14 px-3 w-full leading-tight focus:outline-none focus:shadow-outline"
 export const Input = ({ size = 'medium', label, placeholder, type, ...props }: InputProps) => {
     const computedInputClasses = useMemo(() => {
         const sizeClass = getInputSizeClasses(size);
