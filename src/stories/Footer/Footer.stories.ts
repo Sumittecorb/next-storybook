@@ -8,25 +8,25 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Large: Story = {
+export const Black: Story = {
     args: {
-        size: 'large',
-        label: 'Choose File',
-        imgSrc: "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+        background: 'bgBlack',
+        listHeadingColor: 'textGray',
+        listColor: 'textGray',
     },
 };
-export const Medium: Story = {
+export const White: Story = {
     args: {
-        size: 'medium',
-        label: 'Choose File',
-        imgSrc: "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+        background: 'bgWhite',
+        listHeadingColor: 'textGray',
+        listColor: 'textBlack',
     },
 };
-export const Small: Story = {
+export const Gray: Story = {
     args: {
-        size: 'small',
-        label: 'Choose File',
-        imgSrc: "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+        background: 'bgGray',
+        listHeadingColor: 'textGray',
+        listColor: 'textGray',
     },
 };
 

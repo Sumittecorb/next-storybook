@@ -1,4 +1,5 @@
 "use client"
+import { Accordion } from '@/stories/Accordion/Accordion'
 import { Button } from '@/stories/Button/Button'
 import { Checkbox } from '@/stories/Checkbox/Checkbox'
 import { FileInput } from '@/stories/FileInput/FileInput'
@@ -18,8 +19,20 @@ export default function Home() {
   return (
     <>
       <div>
+        <h1 className='bg-black text-white p-5'>Accordion (FAQ)</h1>
+        <div className='flex justify-center py-5'>
+          <div className='w-[500px]'>
+            <Accordion />
+          </div>
+        </div>
+      </div>
+      <div>
         <h1 className='bg-black text-white p-5'>Footer Section</h1>
-          <Footer/>
+        <Footer
+          background="bgGray"
+          listColor="textGray"
+          listHeadingColor="textGray"
+        />
       </div>
       <div>
         <h1 className='bg-black text-white p-5'>SignUp Form</h1>
