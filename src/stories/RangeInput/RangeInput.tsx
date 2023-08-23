@@ -1,10 +1,9 @@
 import React, { useMemo } from 'react';
 
-interface InputProps {
+interface RangeInputProps {
     size?: 'small' | 'medium' | 'large';
     label: string;
     placeholder?: string;
-    type?: string;
 }
 const getMainContainerClasses = (size: string) => {
     switch (size) {
@@ -16,19 +15,6 @@ const getMainContainerClasses = (size: string) => {
         }
         default: {
             return 'w-2/3';
-        }
-    }
-};
-const getInputSizeClasses = (size: string) => {
-    switch (size) {
-        case 'small': {
-            return 'bg-red-200 placeholder-red-400 text-red-400';
-        }
-        case 'large': {
-            return 'bg-gray-200 placeholder-gray-400 text-black';
-        }
-        default: {
-            return 'bg-sky-200 placeholder-sky-400 text-sky-400';
         }
     }
 };
@@ -45,12 +31,7 @@ const getLabelClasses = (size: string) => {
         }
     }
 };
-const inputCommonClass = "appearance-none border rounded h-14 px-3 w-full leading-tight focus:outline-none focus:shadow-outline"
-export const Input = ({ size = 'medium', label, placeholder, type, ...props }: InputProps) => {
-    const computedInputClasses = useMemo(() => {
-        const sizeClass = getInputSizeClasses(size);
-        return [sizeClass].join(' ');
-    }, [size]);
+export const RangeInput = ({ size = 'medium', label, placeholder, ...props }: RangeInputProps) => {
     const computedLabelClasses = useMemo(() => {
         const sizeClass = getLabelClasses(size);
         return [sizeClass].join(' ');
@@ -62,8 +43,8 @@ export const Input = ({ size = 'medium', label, placeholder, type, ...props }: I
     return (
         <>
             <div className={`${computedMainContainerClasses} mb-3`}>
-                <label className={`${computedLabelClasses} block mb-2`} htmlFor='username' >{label}</label>
-                <input type={type} id="username" className={`${computedInputClasses} ${inputCommonClass}`} placeholder={placeholder} />
+                <label className={`${computedLabelClasses} block mb-2`} htmlFor='vol' >{label}</label>
+                <input type="range" id="vol" name="vol" min="0" max="50" />
             </div>
         </>
     );

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { FileInput } from './FileInput';
+import { Footer } from './Footer';
 const meta = {
-    title: 'Components/FileInput',
-    component: FileInput,
+    title: 'Components/Footer',
+    component: Footer,
     tags: ['autodocs'],
-} satisfies Meta<typeof FileInput>;
+} satisfies Meta<typeof Footer>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

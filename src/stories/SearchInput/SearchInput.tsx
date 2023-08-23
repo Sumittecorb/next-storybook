@@ -1,10 +1,9 @@
 import React, { useMemo } from 'react';
 
-interface InputProps {
+interface SearchInputProps {
     size?: 'small' | 'medium' | 'large';
     label: string;
-    placeholder?: string;
-    type?: string;
+    placeholder?:string;
 }
 const getMainContainerClasses = (size: string) => {
     switch (size) {
@@ -25,7 +24,7 @@ const getInputSizeClasses = (size: string) => {
             return 'bg-red-200 placeholder-red-400 text-red-400';
         }
         case 'large': {
-            return 'bg-gray-200 placeholder-gray-400 text-black';
+            return 'bg-gray-200 placeholder-gray-400 text-gray-400';
         }
         default: {
             return 'bg-sky-200 placeholder-sky-400 text-sky-400';
@@ -45,8 +44,8 @@ const getLabelClasses = (size: string) => {
         }
     }
 };
-const inputCommonClass = "appearance-none border rounded h-14 px-3 w-full leading-tight focus:outline-none focus:shadow-outline"
-export const Input = ({ size = 'medium', label, placeholder, type, ...props }: InputProps) => {
+const inputCommonClass = "appearance-none border rounded h-12 px-3 w-full leading-tight focus:outline-none focus:shadow-outline"
+export const SearchInput = ({ size = 'medium', label,placeholder, ...props }: SearchInputProps) => {
     const computedInputClasses = useMemo(() => {
         const sizeClass = getInputSizeClasses(size);
         return [sizeClass].join(' ');
@@ -62,8 +61,8 @@ export const Input = ({ size = 'medium', label, placeholder, type, ...props }: I
     return (
         <>
             <div className={`${computedMainContainerClasses} mb-3`}>
-                <label className={`${computedLabelClasses} block mb-2`} htmlFor='username' >{label}</label>
-                <input type={type} id="username" className={`${computedInputClasses} ${inputCommonClass}`} placeholder={placeholder} />
+                <label className={`${computedLabelClasses} block mb-2`} htmlFor='search' >{label}</label>
+                <input type="search" id="search" name="search" className={`${computedInputClasses} ${inputCommonClass}`} placeholder={placeholder}/>
             </div>
         </>
     );

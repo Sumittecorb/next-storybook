@@ -25,10 +25,10 @@ const getSizeClasses = (size: string) => {
 const getModeClasses = (isPrimary: boolean) =>
   isPrimary
     ? 'text-white bg-red-600'
-    : 'text-white bg-gray-600 ';
+    : 'text-white bg-sky-900 ';
 
 const BASE_BUTTON_CLASSES =
-  'cursor-pointer rounded-xl font-normal leading-none';
+  'cursor-pointer rounded-lg text-xl font-normal leading-none w-full h-14';
 
 export const Button = ({ primary = false, size = 'medium', label, ...props }: ButtonProps) => {
   const computedClasses = useMemo(() => {

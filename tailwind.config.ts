@@ -32,7 +32,18 @@ const config: Config = {
       },
       minHeight: {
         '100': '100px',
-      }
+      },
+      height:{
+        380:'380px',
+      },
+      margin: {
+        18: '18px',
+        30:'30px',
+      },
+      gap: {
+        '10': '10px',
+        '30':'30px',
+      },
     },
   },
   plugins: [],
