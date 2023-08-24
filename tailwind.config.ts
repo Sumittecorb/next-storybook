@@ -33,19 +33,28 @@ const config: Config = {
       minHeight: {
         '100': '100px',
       },
-      height:{
-        380:'380px',
+      maxWidth: {
+        220: '220px',
+      },
+      height: {
+        380: '380px',
+      },
+      width: {
+        500: '500px',
+        '30': '30px',
       },
       margin: {
         18: '18px',
-        30:'30px',
+        30: '30px',
       },
       gap: {
         '10': '10px',
-        '30':'30px',
+        '30': '30px',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
 export default config

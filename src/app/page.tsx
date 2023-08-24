@@ -5,12 +5,14 @@ import { Checkbox } from '@/stories/Checkbox/Checkbox'
 import { FileInput } from '@/stories/FileInput/FileInput'
 import { Footer } from '@/stories/Footer/Footer'
 import { Input } from '@/stories/Input/Input'
+import { Modal } from '@/stories/Modal/Modal'
 import { Month } from '@/stories/Month/Month'
 import { Navbar } from '@/stories/Navbar/Navbar'
 import { RadioButton } from '@/stories/RadioButton/RadioButton'
 import { RangeInput } from '@/stories/RangeInput/RangeInput'
 import { SearchInput } from '@/stories/SearchInput/SearchInput'
 import { Sidebar } from '@/stories/Sidebar/Sidebar'
+import { Table } from '@/stories/Table/Table'
 import { Time } from '@/stories/Time/Time'
 import { UrlInput } from '@/stories/UrlInput/UrlInput'
 import { Week } from '@/stories/Week/Week'
@@ -19,10 +21,22 @@ export default function Home() {
   return (
     <>
       <div>
+        <h1 className='bg-black text-white p-5'>Modal</h1>
+        <div className='p-10'>
+          <Modal design="upper" />
+        </div>
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Table</h1>
+        <div className='p-10'>
+          <Table design="upper" />
+        </div>
+      </div>
+      <div>
         <h1 className='bg-black text-white p-5'>Accordion (FAQ)</h1>
         <div className='flex justify-center py-5'>
-          <div className='w-[500px]'>
-            <Accordion />
+          <div className='w-500 xxs:w-full'>
+            <Accordion design="upper" />
           </div>
         </div>
       </div>

@@ -34,6 +34,7 @@
     "@storybook/nextjs": "^7.2.1",
     "@storybook/react": "^7.2.1",
     "@storybook/testing-library": "^0.2.0",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "eslint-plugin-storybook": "^0.6.13",
     "storybook": "^7.2.1"
   }
