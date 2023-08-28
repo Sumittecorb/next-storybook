@@ -1,5 +1,6 @@
 "use client"
 import { Accordion } from '@/stories/Accordion/Accordion'
+import { Breadcrumb } from '@/stories/Breadcrumb/Breadcrumb'
 import { Button } from '@/stories/Button/Button'
 import { Checkbox } from '@/stories/Checkbox/Checkbox'
 import { FileInput } from '@/stories/FileInput/FileInput'
@@ -12,14 +13,40 @@ import { RadioButton } from '@/stories/RadioButton/RadioButton'
 import { RangeInput } from '@/stories/RangeInput/RangeInput'
 import { SearchInput } from '@/stories/SearchInput/SearchInput'
 import { Sidebar } from '@/stories/Sidebar/Sidebar'
+import { Spinner } from '@/stories/Spinner/Spinner'
 import { Table } from '@/stories/Table/Table'
 import { Time } from '@/stories/Time/Time'
+import { Toast } from '@/stories/Toast/Toast'
 import { UrlInput } from '@/stories/UrlInput/UrlInput'
 import { Week } from '@/stories/Week/Week'
 
 export default function Home() {
   return (
     <>
+      <div>
+        <h1 className='bg-black text-white p-5'>Spinner</h1>
+        <div className='p-10'>
+          <Spinner design="upper" />
+        </div>
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Toast</h1>
+        <div className='p-10'>
+          <Toast design="upper" />
+        </div>
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Modal</h1>
+        <div className='px-10 mt-5'>
+          <Breadcrumb design="simple" />
+        </div>
+        <div className='px-10 mt-5'>
+          <Breadcrumb design="medium" />
+        </div>
+        <div className='px-10 mt-5 mb-5'>
+          <Breadcrumb design="upper" />
+        </div>
+      </div>
       <div>
         <h1 className='bg-black text-white p-5'>Modal</h1>
         <div className='p-10'>
