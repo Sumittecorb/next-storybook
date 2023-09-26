@@ -1,26 +1,26 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Spinner } from './Spinner';
+import { Popover } from './Popover';
 const meta = {
-    title: 'Components/Spinner',
-    component: Spinner,
+    title: 'Components/Popover',
+    component: Popover,
     tags: ['autodocs'],
-} satisfies Meta<typeof Spinner>;
+} satisfies Meta<typeof Popover>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Upper: Story = {
     args: {
-        design: 'shadow',
+        design: 'upper',
     },
 };
 
 export const Medium: Story = {
     args: {
-        design: 'dashed',
+        design: 'medium',
     },
 };
 export const Simple: Story = {
     args: {
-        design: 'regular',
+        design: 'simple',
     },
 };
 

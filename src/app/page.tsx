@@ -2,6 +2,7 @@
 import { Accordion } from '@/stories/Accordion/Accordion'
 import { Breadcrumb } from '@/stories/Breadcrumb/Breadcrumb'
 import { Button } from '@/stories/Button/Button'
+import { Carousel } from '@/stories/Carousel/Carousel'
 import { Checkbox } from '@/stories/Checkbox/Checkbox'
 import { FileInput } from '@/stories/FileInput/FileInput'
 import { Footer } from '@/stories/Footer/Footer'
@@ -9,6 +10,7 @@ import { Input } from '@/stories/Input/Input'
 import { Modal } from '@/stories/Modal/Modal'
 import { Month } from '@/stories/Month/Month'
 import { Navbar } from '@/stories/Navbar/Navbar'
+import { Popover } from '@/stories/Popover/Popover'
 import { RadioButton } from '@/stories/RadioButton/RadioButton'
 import { RangeInput } from '@/stories/RangeInput/RangeInput'
 import { SearchInput } from '@/stories/SearchInput/SearchInput'
@@ -19,14 +21,15 @@ import { Time } from '@/stories/Time/Time'
 import { Toast } from '@/stories/Toast/Toast'
 import { UrlInput } from '@/stories/UrlInput/UrlInput'
 import { Week } from '@/stories/Week/Week'
+import { useState } from 'react'
 
 export default function Home() {
   return (
     <>
       <div>
-        <h1 className='bg-black text-white p-5'>Spinner</h1>
+        <h1 className='bg-black text-white p-5'>PopOver</h1>
         <div className='p-10'>
-          <Spinner design="upper" />
+          <Popover design="upper" />
         </div>
       </div>
       <div>
@@ -36,7 +39,21 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <h1 className='bg-black text-white p-5'>Modal</h1>
+        <h1 className='bg-black text-white p-5'>Carousel</h1>
+        <div className='p-10'>
+          <Carousel design="SingleSlide" />
+        </div>
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Spinner</h1>
+        <div className='p-10'>
+          <Spinner design="regular" />
+          <Spinner design="dashed" />
+          <Spinner design="shadow" />
+        </div>
+      </div>
+      <div>
+        <h1 className='bg-black text-white p-5'>Breadcrumb</h1>
         <div className='px-10 mt-5'>
           <Breadcrumb design="simple" />
         </div>
